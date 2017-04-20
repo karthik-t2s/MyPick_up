@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Order</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div>Time left = <span id="timer"></span></div>
+
+<?php
+/*
+$apiKey = $_GET['apiKey'];
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "http://api.touch2success.com/orders?api_token=0fd7e4f42a8b4b4ef33394d35212b13e",
+  CURLOPT_RETURNTRANSFER => true,
+
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "cache-control: no-cache",
+    "content-type: application/x-www-form-urlencoded",
+    "postman-token: 8e2618e6-3d28-e674-07a9-efbd0ca6e46e"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+*/
+$response = '{"total":3,"per_page":10,"current_page":1,"last_page":1,"next_page_url":null,"prev_page_url":null,"from":1,"to":3,"data":[{"id":88459965,"order_no":"3","host":"d-552.t2scdn.com","customers_id":"50784294","comments":null,"status":"2","day":"18","month":"04","year":"2017","weekno":"16","time":"11:29:38","delivery_time":"2017-04-18 11:44:38","wait":"00:10","sending":"collection","ip":"119.82.113.142","browser":"Google Chrome 57.0.2987.133","os":"mac","device":"Computer","discount":"","discount_code":"0","taken_by":"FAIQ","online_offline":"ofline","payment":"0","delivery_cost":"0","total":"2.50","collection_percent":"","promo":"0","coupon_code":"","online_charge":"0","preorder_time":"","address":null,"houseno":"","flat":"","address1":"","address2":"","postcode":"","phone":"09944262564","lat":"53.036273","lng":"-2.166472","label_print":"0","offline_id":null,"discount_fixed":null,"has_changed":"NO","version":"2","locked":"FALSE","table_id":"0","app_tag":"Web Client","total_carry_bags":"0","per_carry_bag_charge":"","allergy":"0","vat_charge":"","coupon_value":"0.00","online_discount_value":"0.00","sub_total":"2.50","collection_discount_value":"0.00","total_value_carry_bags":"0.00","shop_name":"","land_line":"","a_printer_1":"0","a_printer_2":"0","driver_name":null,"driver_id":null,"basket_type":null,"change_price":"0.00","points_used":null,"redeem_amount":"0.00","points_gained":null,"points_remaining":null,"firstname":"","lastname":"","order_placed_on":"2017-04-18 11:29:38","delivery_sequence":null,"area":null,"landmark":null,"manual_discount":"0.00","cancel_reason_id":"0","latitude":"","longitude":"","delivery_alert":"NEW","portal":null,"cancel_reason_message":"","pre_order_time":null},{"id":88459960,"order_no":"2","host":"d-552.t2scdn.com","customers_id":"50784294","comments":null,"status":"2","day":"18","month":"04","year":"2017","weekno":"16","time":"11:28:40","delivery_time":"2017-04-18 11:43:40","wait":"00:05","sending":"collection","ip":"223.31.116.78","browser":"Google Chrome 57.0.2987.133","os":"mac","device":"Computer","discount":"","discount_code":"0","taken_by":"Basaam","online_offline":"ofline","payment":"0","delivery_cost":"0","total":"2.20","collection_percent":"","promo":"0","coupon_code":"","online_charge":"0","preorder_time":"","address":null,"houseno":"","flat":"","address1":"","address2":"","postcode":"","phone":"09944262564","lat":"53.048855","lng":"-2.201743","label_print":"0","offline_id":null,"discount_fixed":null,"has_changed":"NO","version":"2","locked":"FALSE","table_id":"0","app_tag":"Web Client","total_carry_bags":"0","per_carry_bag_charge":"","allergy":"0","vat_charge":"","coupon_value":"0.00","online_discount_value":"0.00","sub_total":"2.20","collection_discount_value":"0.00","total_value_carry_bags":"0.00","shop_name":"","land_line":"","a_printer_1":"0","a_printer_2":"0","driver_name":null,"driver_id":null,"basket_type":null,"change_price":"0.00","points_used":null,"redeem_amount":"0.00","points_gained":null,"points_remaining":null,"firstname":"","lastname":"","order_placed_on":"2017-04-18 11:28:40","delivery_sequence":null,"area":null,"landmark":null,"manual_discount":"0.00","cancel_reason_id":"0","latitude":"","longitude":"","delivery_alert":"NEW","portal":null,"cancel_reason_message":"","pre_order_time":null},{"id":88459929,"order_no":"1","host":"d-552.t2scdn.com","customers_id":"50784294","comments":"","status":"2","day":"18","month":"04","year":"2017","weekno":"16","time":"11:27:59","delivery_time":"2017-04-18 11:42:59","wait":"11:42","sending":"collection","ip":"119.82.113.142","browser":"Google Chrome 57.0.2987.133","os":"mac","device":"Computer","discount":"0","discount_code":"0","taken_by":"FAIQ","online_offline":"ofline","payment":"0","delivery_cost":"0","total":"13.00","collection_percent":"","promo":"0","coupon_code":"","online_charge":"0","preorder_time":"","address":null,"houseno":"","flat":"","address1":"","address2":"","postcode":"","phone":"09944262564","lat":"","lng":"","label_print":"0","offline_id":null,"discount_fixed":null,"has_changed":"NO","version":"2","locked":"FALSE","table_id":"0","app_tag":"Web Client","total_carry_bags":"0","per_carry_bag_charge":"","allergy":"0","vat_charge":"","coupon_value":"0.00","online_discount_value":"0.00","sub_total":"13.00","collection_discount_value":"0.00","total_value_carry_bags":"0.00","shop_name":"","land_line":"","a_printer_1":"0","a_printer_2":"0","driver_name":null,"driver_id":null,"basket_type":null,"change_price":"0.00","points_used":null,"redeem_amount":"0.00","points_gained":null,"points_remaining":null,"firstname":"","lastname":"","order_placed_on":"2017-04-18 11:27:58","delivery_sequence":null,"area":null,"landmark":null,"manual_discount":"0.00","cancel_reason_id":"0","latitude":"","longitude":"","delivery_alert":"NEW","portal":"","cancel_reason_message":"","pre_order_time":null}]}';
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  $jsonDe   =  json_decode($response,true);
+  /*print_r($jsonDe);
+*/
+  $v=sizeof($jsonDe['data']);
+  /*print_r($v);*/
+  /*$var=$jsonDe['data'][1]['wait'];
+  print_r($var);*/
+  echo '<table class="table">';
+  echo '<thead>
+      <tr class="success">
+        <th>Order No.</th>
+        <th>Wait Time</th>
+        <th>Time Left</th>
+      </tr>
+    </thead><tbody>';
+  for($i=0;$i<$v;$i++)
+  {
+    ?>
+    
+    
+      
+      
+    <tr>
+    <td> 
+      <?php echo $jsonDe['data'][$i]['order_no'];?>      
+    </td>
+   <td>     
+     <span id="wait_time<?php echo $i;?>"><?php echo $jsonDe['data'][$i]['wait'];?></span>
+    </td>
+    <td>
+      <span class="timeleft" id="timer<?php echo $i;?>"><?php echo $jsonDe['data'][$i]['wait'];?></span>
+    </td>
+    </tr>
+    <?php  
+}
+    ?>
+    </tbody>
+</table>  
+<?php   
+}
+    ?>
+    
+</body>
+</html>
+<script>
+
+/*document.getElementById('timer').innerHTML = "<?php //echo $test; ?>";*/
+ 
+//startTimer();
+
+function startTimer() {
+  /**/
+  var va="<?php echo $v ; ?>";
+  for(i=0;i<va;i++)
+  {
+  var time="timer"+i;
+   /* var wait_time = "wait_time"+i;*/
+    var presentTime = document.getElementById(time).innerHTML;
+    var timeArray = presentTime.split(/[:]+/);
+    var m = timeArray[0];
+    
+    var s = checkSecond((timeArray[1] - 1));
+    if(s == 59 ){m = m-1; }
+
+    if(m<0){
+      m="00"; s= "00";
+    }
+
+    document.getElementById(time).innerHTML =
+      m + ":" + s;    
+  }
+  
+
+  
+  // body...
+}
+
+setInterval(startTimer, 1000);
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+</script>
+    <!-- /*sq="insert into categories(name) values('$var')";
+mysql_query($sq);*/ -->
+<style>
+body{
+  background-color:white;
+}
+
+div{
+  background-color:deepskyblue;
+  color:#EFD0CA;
+  font-size:20px;
+  text-align:center;
+}
+</style>
+
+  
